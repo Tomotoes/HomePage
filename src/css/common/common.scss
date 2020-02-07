@@ -1,0 +1,54 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: none;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: 'Comic Sans MS', 'Helvetica Neue', 'Microsoft Yahei',
+		-apple-system, sans-serif !important;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+body {
+	cursor: url('https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/default.cur'),
+		auto !important;
+}
+
+img,
+a {
+	cursor: url('https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/pointer.cur'),
+		auto !important;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}

@@ -1,0 +1,45 @@
+.content.content-main
+	#page
+		#card
+			.card-inner.fade
+				header
+					img(src=`${main.avatar.link}` width=`${main.avatar.width}` height=`${main.avatar.height}` alt="avatar")
+					h1(data-translate="name") #{main.name}
+					h2#signature(data-translate="signature" original-content=`${main.signature}`)
+
+				- const { whole_first , whole_second , half_first , quarter_first , quarter_second , quarter_third , quarter_fourth } = main.ul
+
+				ul
+					li#whole-first
+						a(href=`${whole_first.href}` aria-label=`${whole_first.text}`)
+							i(class=`icon icon-${whole_first.icon}`)
+							span(data-translate=`${whole_first.text}`) #{whole_first.text}
+
+					li#whole-second
+						a(href=`${whole_second.href}` aria-label=`${whole_second.text}`)
+							i(class=`icon icon-${whole_second.icon}`)
+							span(data-translate=`${whole_second.text}`) #{whole_second.text}
+
+					li#half-first
+						a(href=`${half_first.href}` aria-label=`${half_first.text}` target="_blank")
+							i(class=`icon icon-${half_first.icon}`)
+							span(data-translate=`${half_first.text}`) #{half_first.text}
+
+					li#quarter-first.quarter
+						a(aria-label=`${quarter_first.text}`)
+							i(class=`icon icon-${quarter_first.icon}`)
+							img(src=`${quarter_first.href}` height=`${quarter_first.height}` width=`${quarter_first.width}` alt=`${quarter_first.text}`)
+
+					li#quarter-second.quarter
+						a(href=`${quarter_second.href}` target="_blank" rel="noopener" aria-label=`${quarter_second.text}`)
+							i(class=`icon icon-${quarter_second.icon}`)
+							span(data-translate=`${quarter_second.text}`) #{quarter_second.text}
+
+					li#quarter-third.quarter
+						a(href=`${quarter_third.href}` target="_blank" rel="noopener" aria-label=`${quarter_third.text}`)
+							i(class=`icon icon-${quarter_third.icon}`)
+							span(data-translate=`${quarter_third.text}`) #{quarter_third.text}
+
+					li#quarter-fourth.quarter
+						a(href=`${quarter_fourth.href}` aria-label=`${quarter_fourth.text}`)
+							i(class=`icon icon-${quarter_fourth.icon}`)

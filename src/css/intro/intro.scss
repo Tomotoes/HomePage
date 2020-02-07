@@ -1,0 +1,145 @@
+.content-intro .content-inner {
+	background: var(--color-content);
+}
+
+.content h2 {
+	margin: 0;
+}
+
+.shape {
+	height: 100vh;
+	width: 100%;
+	display: block;
+	fill: var(--color-content);
+	&-wrap {
+		position: relative;
+		z-index: 10;
+		margin: -5px 0 0 0;
+		will-change: scroll-position;
+	}
+}
+
+.content-title {
+	font: var(--font-alt);
+	color: var(--color-title);
+	margin: 0;
+	line-height: 1;
+	padding-top: 5%;
+	animation: whiteShadow 1.5s ease-in-out infinite alternate;
+	text-shadow: rgb(69, 45, 45) 0 0 1px, rgb(255, 255, 251) 0 0 1px,
+		rgb(255, 255, 251) 0 0 2px;
+	@media screen and (max-width: 50em) {
+		font-size: 2em;
+	}
+}
+
+@keyframes whiteShadow {
+	from {
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #333,
+			0 0 8px #333, 0 0 9px #333, 0 0 10px #333, 0 0 15px #333;
+	}
+	to {
+		text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 1.5px #fff, 0 0 2px #333,
+			0 0 4px #333, 0 0 5px #333, 0 0 6px #333, 0 0 8px #333;
+	}
+}
+
+.content-subtitle {
+	color: #ccc;
+	font: var(--font-alt);
+	font-size: 1.5em;
+	padding: 0.5em 0 0 0;
+	margin: 0;
+	text-shadow: 0 0 4px #ffffff;
+}
+
+.enter {
+	font-family: 'Roboto', sans-serif;
+	color: var(--color-enter);
+	margin: 3vh 0 0 0;
+	letter-spacing: 3px;
+	white-space: pre;
+	pointer-events: auto;
+	transition: all 0.4s;
+	z-index: 999;
+	&:hover,
+	&:focus {
+		color: var(--color-link-hover);
+	}
+}
+
+.arrow {
+	position: absolute;
+	left: 49.5%;
+	top: 95%;
+	transform-origin: 50% 50%;
+	transform: translate3d(-50%, 0%, 0);
+	&-1 {
+		animation: arrow-movement 2s ease-in-out infinite;
+	}
+	&-2 {
+		animation: arrow-movement 2s 1s ease-in-out infinite;
+	}
+	&:before,
+	&:after {
+		background: #fff;
+		content: '';
+		display: block;
+		height: 3px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 13px;
+		box-shadow: 1px 1px 20px 0px #fff;
+	}
+	&:before {
+		transform: rotate(45deg) translateX(-10%);
+		transform-origin: top left;
+	}
+	&:after {
+		transform: rotate(-45deg) translateX(10%);
+		transform-origin: top right;
+	}
+}
+
+@keyframes arrow-movement {
+	0% {
+		opacity: 0;
+		top: 92%;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.content-subtitle span {
+	animation: letter-glow 0.7s 0s ease both;
+}
+
+@keyframes letter-glow {
+	0% {
+		opacity: 0;
+		text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+	66% {
+		opacity: 1;
+		text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+	}
+	77% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.7;
+		text-shadow: 0 0 20px rgba(255, 255, 255, 0);
+	}
+}
+
+$signatureLength: 38;
+@for $i from 1 through $signatureLength {
+	.content-subtitle span:nth-child(#{$i}) {
+		animation-delay: 0.05s * $i;
+	}
+}

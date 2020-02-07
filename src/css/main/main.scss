@@ -1,0 +1,366 @@
+#page {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: rgba(85, 85, 85, 0);
+	color: #eee;
+	min-height: 100%;
+	transition: background-color ease 5s;
+	a {
+		color: #eee;
+		text-decoration: none;
+		&:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+}
+
+#card {
+	position: relative;
+	margin: auto;
+	transition: width ease 0.5s, height ease 0.5s;
+	header {
+		position: relative;
+		height: 105px;
+		padding: 21px 0 0 100px;
+		color: rgb(236, 236, 236);
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 2px;
+			box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+		}
+	}
+	h1,
+	h2 {
+		margin: 0;
+		font-weight: normal;
+		transform: translateY(-20px);
+	}
+	h1 {
+		color: #222325;
+		text-shadow: #676666 1px 1px 2px;
+		letter-spacing: 1px;
+	}
+	h2 {
+		margin-top: 0.1em;
+		font-size: 1.1em;
+		text-shadow: #888 1px 1px 2px;
+		letter-spacing: 2px;
+	}
+	ul {
+		position: relative;
+		padding: 0;
+		transition: width ease 0.5s, height ease 0.5s;
+		&:after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+	}
+	li {
+		position: absolute;
+		list-style: none;
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		line-height: 200px;
+		background-color: #888;
+		text-align: center;
+		font-size: 4rem;
+		transition: background-color ease 0.3s, top ease 0.5s, left ease 0.5s,
+			width ease 0.5s, height ease 0.5s;
+		&#half-first {
+			height: 95px;
+			line-height: 95px;
+			font-size: 2rem;
+		}
+		&.quarter {
+			width: 95px;
+			height: 95px;
+			line-height: 95px;
+			font-size: 2rem;
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			font-size: 62.5%;
+			transition: top ease 0.3s, opacity ease 0.3s;
+		}
+		i {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			transition: opacity ease 0.3s, font-size ease 0.3s, color ease 0.3s;
+		}
+		&:hover i {
+			opacity: 0;
+			font-size: 10%;
+		}
+		&:hover span {
+			display: block;
+			top: 0;
+			opacity: 1;
+		}
+	}
+}
+
+#quarter-first img {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	font-size: 62.5%;
+	transition: top ease 0.3s, opacity ease 0.3s;
+}
+
+#whole-first {
+	left: 0;
+	top: 0;
+	&:hover {
+		background-color: #39c;
+	}
+}
+
+#whole-second:hover {
+	background-color: #d81;
+}
+
+#quarter-second:hover {
+	background-color: #333;
+}
+
+#half-first:hover {
+	background-color: #595;
+}
+
+#quarter-first:hover img {
+	display: block;
+	top: 0;
+	opacity: 1;
+}
+
+#quarter-third:hover {
+	background-color: #dd4b39;
+}
+
+#quarter-fourth:hover {
+	background-color: #fff;
+}
+
+li#quarter-fourth:hover i {
+	opacity: 1;
+	font-size: inherit;
+	color: #888;
+}
+
+li#quarter-first span {
+	top: 0;
+}
+
+@media (min-width: 801px) {
+	#card {
+		width: 725px;
+		ul {
+			width: 725px;
+			height: 200px;
+			transition: width ease 0.5s;
+		}
+		header {
+			position: absolute;
+			top: -105px;
+		}
+	}
+	#whole-second {
+		left: 210px;
+		top: 0;
+	}
+	#half-first {
+		left: 420px;
+		top: 0;
+	}
+	#quarter-first {
+		left: 630px;
+		top: 0;
+	}
+	#quarter-second {
+		left: 420px;
+		top: 105px;
+	}
+	#quarter-third {
+		left: 525px;
+		top: 105px;
+	}
+	#quarter-fourth {
+		left: 630px;
+		top: 105px;
+	}
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+	#card,
+	#card ul {
+		transition: width ease 0.5s;
+	}
+}
+
+@media (min-width: 551px) and (max-width: 800px) {
+	#card {
+		width: 515px;
+		ul {
+			width: 515px;
+			height: 305px;
+		}
+	}
+	#whole-second {
+		left: 210px;
+		top: 0;
+	}
+	#card li#half-first {
+		left: 0;
+		top: 210px;
+		width: 305px;
+	}
+	#quarter-first {
+		left: 315px;
+		top: 210px;
+	}
+	#quarter-second {
+		left: 420px;
+		top: 0;
+	}
+	#quarter-third {
+		left: 420px;
+		top: 105px;
+	}
+	#quarter-fourth {
+		left: 420px;
+		top: 210px;
+	}
+}
+
+@media (min-width: 451px) and (max-width: 550px) {
+	#card {
+		width: 410px;
+		ul {
+			width: 410px;
+			height: 410px;
+		}
+	}
+	#whole-second {
+		left: 210px;
+		top: 0;
+	}
+	#card li#half-first {
+		left: 0;
+		top: 210px;
+		width: 410px;
+	}
+	#quarter-first {
+		left: 210px;
+		top: 315px;
+	}
+	#quarter-second {
+		left: 0;
+		top: 315px;
+	}
+	#quarter-third {
+		left: 105px;
+		top: 315px;
+	}
+	#quarter-fourth {
+		left: 315px;
+		top: 315px;
+	}
+}
+
+@media (max-width: 480px) {
+	#card,
+	#card ul {
+		transition: none;
+	}
+}
+
+@media (max-width: 450px) {
+	#card {
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		ul {
+			width: 0;
+			height: 0;
+			padding: 50%;
+		}
+		li {
+			width: 49%;
+			height: 49%;
+		}
+		li#half-first {
+			width: 100%;
+			height: 23.5%;
+		}
+		li.quarter {
+			width: 23.5%;
+			height: 23.5%;
+		}
+		li a {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	#whole-second {
+		left: 51%;
+		top: 0;
+	}
+	#card li#half-first {
+		left: 0;
+		top: 51%;
+	}
+	#quarter-first {
+		left: 51%;
+		top: 76.5%;
+	}
+	#quarter-second {
+		left: 0;
+		top: 76.5%;
+	}
+	#quarter-third {
+		left: 25.5%;
+		top: 76.5%;
+	}
+	#quarter-fourth {
+		left: 76.5%;
+		top: 76.5%;
+	}
+}
+
+@media (max-width: 320px) {
+	#card li {
+		line-height: 147px;
+	}
+	#half-first {
+		line-height: 70px;
+	}
+	#card li.quarter {
+		line-height: 70px;
+	}
+}

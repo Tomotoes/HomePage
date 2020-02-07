@@ -1,0 +1,35 @@
+head
+	title #{head.title}
+	
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+	meta(name="renderer" content="webkit")
+
+	meta(name="theme-color" content="#222325")
+	meta(name="apple-mobile-web-app-status-bar-style" content="#222325")
+	meta(name="msapplication-navbutton-color" content="#222325")
+
+	link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Tomotoes/font/font.min.css" )
+	link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-roboto@0.0.75/index.min.css" )
+	link(rel="stylesheet" href='css/style.css' )
+
+	meta(http-equiv="x-dns-prefetch-control" content="on")
+	link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
+	link(rel="prefetch" href="https://cdn.jsdelivr.net/")
+
+	meta(name="description" content=`${head.description}`)
+	link(rel="icon" href=`${head.favicon}` type="image/x-icon")
+	link(rel="shortcut icon" href=`${head.favicon}` type="image/x-icon")
+
+	<!--[if lt IE 9]>
+		style.
+			.alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px } .alert-danger { background-color: #f2dede; border-color: #ebccd1; color: #a94442; border-bottom: 1px solid #ebccd1 } .alert-link { color: #843534; font-weight: bold } .topframe { margin: 0; padding-left: 15px; padding-right: 15px; text-align: center; border-radius: 0; position: fixed; left: 0; right: 0; top: 0; z-index: 1000 }
+
+		.alert.alert-danger.topframe
+			!='你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说'
+			a.alert-link(target="_blank" href="http://browsehappy.com") 立即升级
+
+		script(src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js")
+		script(src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js")
+	<![endif]-->

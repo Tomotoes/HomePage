@@ -1,0 +1,12 @@
+script(src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/anime.min.js")
+
+script.
+	window.$ = selector => document.querySelector(selector)
+	const getOriginalContent = selector => $(selector).getAttribute("original-content")
+	window.subtitle = getOriginalContent(".content-subtitle")
+	window.signature = getOriginalContent("#signature")
+
+script(src='js/main.js')
+
+if intro.supportAuthor
+	script(src="https://cdn.jsdelivr.net/gh/Tomotoes/js/log.min.js")

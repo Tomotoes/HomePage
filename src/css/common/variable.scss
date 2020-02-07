@@ -1,0 +1,19 @@
+html {
+	--color-link: #5f5f5f;
+	--color-link-hover: #ff963b;
+	--color-enter: #fff;
+	--color-title: #fff;
+	--color-content: #222325;
+	--font-alt: 200 6vw/1 'Comic Sans MS', 'Helvetica Neue', 'Microsoft Yahei',
+		'Microsoft Yahei', -apple-system, sans-serif;
+}
+
+.fade {
+	opacity: 0;
+	transition: all 1s;
+	transform: translateY(200px);
+}
+.fade.in {
+	opacity: 1;
+	transform: none;
+}

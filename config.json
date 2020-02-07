@@ -1,0 +1,61 @@
+{
+	"head": {
+		"title": "一个坏掉的番茄",
+		"description": "Author:SimonMa,Category:Personal Blog",
+		"favicon": "favicon.ico"
+	},
+	"intro": {
+		"title": "Simon Ma",
+		"subtitle": "Front back left right end engineer",
+		"enter": "enter",
+		"supportAuthor": true
+	},
+	"main": {
+		"name": "Simon Ma",
+		"signature": "Code & Input & Output",
+		"avatar": {
+			"link": "assets/avatar.jpg",
+			"height": "80",
+			"width": "80"
+		},
+		"ul": {
+			"whole_first": {
+				"href": "blog/",
+				"icon": "bokeyuan",
+				"text": "Blog"
+			},
+			"whole_second": {
+				"href": "about/",
+				"icon": "xiaolian",
+				"text": "About"
+			},
+			"half_first": {
+				"href": "mailto:simon@tomotoes.com",
+				"icon": "email",
+				"text": "Contact me"
+			},
+			"quarter_first": {
+				"href": "assets/wechat.jpg",
+				"icon": "wechat",
+				"height": "95",
+				"width": "95",
+				"text": "Wechat"
+			},
+			"quarter_second": {
+				"href": "https://github.com/tomotoes",
+				"icon": "github",
+				"text": "Github"
+			},
+			"quarter_third": {
+				"href": "https://twitter.com/amSimonMa",
+				"icon": "twitter",
+				"text": "Twitter"
+			},
+			"quarter_fourth": {
+				"href": "javascript:;",
+				"icon": "other",
+				"text": "other"
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+main {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.content {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-image: url('https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/bg-light.jpg');
+	&-intro {
+		z-index: 100;
+		height: 200vh;
+	}
+	&-main {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	&-inner {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+}
+
+.wrap {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}

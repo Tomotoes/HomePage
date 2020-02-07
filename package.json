@@ -1,0 +1,35 @@
+{
+  "name": "tomotoes-home-page",
+  "version": "1.0.0",
+  "author": "SimonMa <simon@tomotoes.com>",
+  "license": "LGPI-3.0",
+  "homepage": "http://tomotoes.com",
+  "repository": "https://github.com/Tomotoes/HomePage",
+  "bugs": "https://github.com/Tomotoes/HomePage/issues",
+  "description": "Tomotoes-HomePage",
+  "scripts": {
+    "predev": "gulp build",
+    "dev": "gulp watch",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
