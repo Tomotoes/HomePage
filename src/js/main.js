@@ -2,10 +2,10 @@ window.hiddenProperty =
 	'hidden' in document
 		? 'hidden'
 		: 'webkitHidden' in document
-		? 'webkitHidden'
-		: 'mozHidden' in document
-		? 'mozHidden'
-		: null
+			? 'webkitHidden'
+			: 'mozHidden' in document
+				? 'mozHidden'
+				: null
 
 window.DIRECTIONS = {
 	UP: 'UP',
@@ -54,12 +54,15 @@ function loadIntro() {
 	if (document[hiddenProperty] || loadIntro.loaded) {
 		return
 	}
-	$('.wrap').classList.add('in')
 	setTimeout(() => {
-		$('.content-subtitle').innerHTML = `<span>${[...subtitle].join(
-			'</span><span>'
-		)}</span>`
-	}, 300)
+
+		$('.wrap').classList.add('in')
+		setTimeout(() => {
+			$('.content-subtitle').innerHTML = `<span>${[...subtitle].join(
+				'</span><span>'
+			)}</span>`
+		}, 270)
+	}, 0)
 	loadIntro.loaded = true
 }
 
@@ -101,7 +104,14 @@ function switchPage() {
 		targets: DOM.path,
 		duration: 1100,
 		easing: 'easeOutQuad',
-		d: DOM.path.getAttribute('pathdata:id')
+		d: DOM.path.getAttribute('pathdata:id'),
+		complete: function (anim) {
+			if (canvas) {
+				cancelAnimationFrame(animationID)
+				canvas.parentElement.removeChild(canvas)
+				canvas = null
+			}
+		}
 	})
 
 	switchPage.switched = true
@@ -140,7 +150,7 @@ function messenger(el) {
 	let counter = 0
 	let callCount = 0
 
-	context.init = function() {
+	context.init = function () {
 		context.codeletters = '&#*+%?￡@§$'
 		context.message = 0
 		context.currentLength = 0
@@ -150,7 +160,7 @@ function messenger(el) {
 		setTimeout(context.animateIn, 100)
 	}
 
-	context.generateRandomString = function(length) {
+	context.generateRandomString = function (length) {
 		let randomText = ''
 		while (randomText.length < length) {
 			randomText += context.codeletters.charAt(
@@ -161,7 +171,7 @@ function messenger(el) {
 		return randomText
 	}
 
-	context.animateIn = function() {
+	context.animateIn = function () {
 		if (context.currentLength < context.messages[context.message].length) {
 			context.currentLength = context.currentLength + 2
 			if (context.currentLength > context.messages[context.message].length) {
@@ -179,7 +189,7 @@ function messenger(el) {
 		}
 	}
 
-	context.animateFadeBuffer = function() {
+	context.animateFadeBuffer = function () {
 		if (context.fadeBuffer === false) {
 			context.fadeBuffer = []
 			for (let i = 0; i < context.messages[context.message].length; i++) {
@@ -228,7 +238,7 @@ function messenger(el) {
 			}
 		}
 	}
-	context.cycleText = function() {
+	context.cycleText = function () {
 		context.message = context.message + 1
 		if (context.message >= context.messages.length) {
 			context.message = 0
@@ -282,7 +292,7 @@ $('.arrow').addEventListener('mouseenter', loadAll)
 if (isPhone) {
 	document.addEventListener(
 		'touchstart',
-		function(e) {
+		function (e) {
 			window.startx = e.touches[0].pageX
 			window.starty = e.touches[0].pageY
 		},
@@ -290,7 +300,7 @@ if (isPhone) {
 	)
 	document.addEventListener(
 		'touchend',
-		function(e) {
+		function (e) {
 			let endx, endy
 			endx = e.changedTouches[0].pageX
 			endy = e.changedTouches[0].pageY

@@ -21,12 +21,6 @@ Let's start now!
 
 
 
-## Screenshots
-
-![screenshot](screenshot.gif)
-
-
-
 ## Prerequisites
 
 - Nodejs 6.0 above
@@ -48,15 +42,16 @@ npm run dev
 ## Features
 
 1. Highly encapsulates all the information in the page
-2. Use `scss` as `css` preprocessor
-3. Use `pug` as `html` preprocessor
-4. Use `gulp` as a build tool and configure the build script
-5. Comfortable animation and beautiful UI
-6. Responsive, mobile support
-7. The referenced `css` and`js` files do not exceed `18.5` kb in total!
-8. Delayed response switch page event
-9.  Set the background dynamically according to time
-10. There are many features left for you to explore...
+2. Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background
+3. Use `scss` as `css` preprocessor
+4. Use `pug` as `html` preprocessor
+5. Use `gulp` as a build tool and configure the build script
+6. Comfortable animation and beautiful UI
+7. Responsive, mobile support
+8. The referenced `css` and`js` files do not exceed `18.5` kb in total!
+9. Delayed response switch page event
+10. Set the background dynamically according to time
+11. There are many features left for you to explore...
 
 
 
@@ -70,12 +65,7 @@ The corresponding functions, styles and configurations are also based on this st
 
 
 
-
-## Custom configuration
-
-
-
-### Basic configuration
+## Basic configuration
 
 Each key name in the config.json file`config.json` corresponds to the corresponding component name.
 
@@ -102,7 +92,15 @@ head
 
 
 
-### Advanced configuration
+## Advanced configuration
+
+### WebGL-Fluid-Simulation
+
+Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background at home.
+
+If you want to turn it off, set `intro.background: false`.
+
+### supportAuthor
 
 The `supportAuthor` option is turned on by default for configuration information, that is, authors are supported.
 
@@ -111,8 +109,7 @@ All support items are as follows：
 1. The `octopus cat` will be displayed in the upper right corner of the home page.
 2. The console prints the author's site information
 
-You can turn off this behavior by setting its value to `false`.
-
+If you want to turn it off, set `intro.author: false`.
 
 
 ### Icon replacement

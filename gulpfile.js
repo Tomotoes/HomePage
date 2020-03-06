@@ -14,11 +14,11 @@ sass.compiler = require('node-sass')
 
 const config = require('./config.json')
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
 	return del(['./dist/css/', './dist/js/'])
 })
 
-gulp.task('css', function() {
+gulp.task('css', function () {
 	return gulp
 		.src('./src/css/*.scss')
 		.pipe(sass().on('error', sass.logError))
@@ -28,7 +28,7 @@ gulp.task('css', function() {
 		.pipe(gulp.dest('./dist/css'))
 })
 
-gulp.task('html', function() {
+gulp.task('html', function () {
 	return gulp
 		.src('./dist/index.html')
 		.pipe(htmlclean())
@@ -36,7 +36,7 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('./dist'))
 })
 
-gulp.task('js', function() {
+gulp.task('js', function () {
 	return gulp
 		.src('./src/js/*.js')
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
@@ -44,17 +44,23 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('./dist/js'))
 })
 
-gulp.task('pug', function() {
+gulp.task('pug', function () {
 	return gulp
 		.src('./src/index.pug')
 		.pipe(pug({ data: config }))
 		.pipe(gulp.dest('./dist'))
 })
 
-gulp.task('build', gulp.series('clean', 'pug', 'css', 'js', 'html'))
+gulp.task('assets', function () {
+	return gulp
+		.src(['./src/assets/**/*'])
+		.pipe(gulp.dest('./dist/assets'));
+})
+
+gulp.task('build', gulp.series('clean', 'assets', 'pug', 'css', 'js', 'html'))
 gulp.task('default', gulp.series('build'))
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch('./src/components/*.pug', gulp.parallel('pug'))
 	gulp.watch('./src/index.pug', gulp.parallel('pug'))
 	gulp.watch('./src/css/**/*.scss', gulp.parallel(['css']))

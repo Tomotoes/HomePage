@@ -45,7 +45,7 @@
 }
 
 .content-subtitle {
-	color: #ccc;
+	color: #fff;
 	font: var(--font-alt);
 	font-size: 1.5em;
 	padding: 0.5em 0 0 0;
@@ -54,7 +54,6 @@
 }
 
 .enter {
-	font-family: 'Roboto', sans-serif;
 	color: var(--color-enter);
 	margin: 3vh 0 0 0;
 	letter-spacing: 3px;
@@ -143,3 +142,5 @@ $signatureLength: 38;
 		animation-delay: 0.05s * $i;
 	}
 }
+
+#background { position: absolute; width: 100%; height: 100%; z-index: -1; }

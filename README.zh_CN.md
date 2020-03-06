@@ -21,12 +21,6 @@
 
 
 
-## 截图
-
-![screenshot](screenshot.gif)
-
-
-
 ## 必备条件
 
 - Nodejs 6.0 以上
@@ -48,8 +42,9 @@ npm run dev
 ## 功能特性
 
 1. 高度封装了页面中的所有的信息
-2. 使用 `scss` 作为 `css` 预处理器
-3. 使用 `pug` 作为 `html` 预处理器
+2. 使用 [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) 作为背景
+3. 使用 `scss` 作为 `css` 预处理器
+4. 使用 `pug` 作为 `html` 预处理器
 5. 使用 `gulp` 作为构建工具, 并以配置好构建脚本
 6. 令人舒服的动画 , 以及漂亮的 `UI`
 7. 响应式，无缝支持移动端
@@ -70,12 +65,7 @@ npm run dev
 
 
 
-
-## 自定义配置
-
-
-
-### 基本配置
+## 基本配置
 
 配置文件 `config.json` 中的每一项键名 , 都与相应的组件名所对应。
 
@@ -102,7 +92,15 @@ head
 
 
 
-### 高级配置
+## 高级配置
+
+### WebGL-Fluid-Simulation
+
+首页使用[WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/)作为背景。
+
+如需关闭，请设置`intro.background: false`。
+
+### supportAuthor
 
 配置信息默认开启了 `supportAuthor` 选项，即支持作者。
 
@@ -111,9 +109,7 @@ head
 1. 会在首页右上角显示 `章鱼猫` 
 2. 控制台会打印作者的站点信息
 
-你可以设置其值为 `false` 来关闭这一行为。
-
-
+如需关闭，请设置`intro.supportAuthor: false`。
 
 ### 图标的替换
 项目中的图标，全部来自 [阿里巴巴矢量图标库](https://www.iconfont.cn)
