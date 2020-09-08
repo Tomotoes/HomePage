@@ -50,8 +50,7 @@ npm run dev
 7. Responsive, mobile support
 8. The referenced `css` and`js` files do not exceed `18.5` kb in total!
 9. Delayed response switch page event
-10. Set the background dynamically according to time
-11. There are many features left for you to explore...
+10. There are many features left for you to explore...
 
 
 

@@ -9,7 +9,8 @@ main {
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	background-image: url('https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/bg-light.jpg');
+	background: radial-gradient(#313131,#0a0a0a);
+
 	&-intro {
 		z-index: 100;
 		height: 200vh;

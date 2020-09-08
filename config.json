@@ -20,42 +20,25 @@
 			"width": "80"
 		},
 		"ul": {
-			"whole_first": {
+			"first": {
 				"href": "blog/",
 				"icon": "bokeyuan",
 				"text": "Blog"
 			},
-			"whole_second": {
+			"second": {
 				"href": "about/",
 				"icon": "xiaolian",
 				"text": "About"
 			},
-			"half_first": {
+			"third": {
 				"href": "mailto:simon@tomotoes.com",
 				"icon": "email",
-				"text": "Contact me"
+				"text": "Email"
 			},
-			"quarter_first": {
-				"href": "assets/wechat.jpg",
-				"icon": "wechat",
-				"height": "95",
-				"width": "95",
-				"text": "Wechat"
-			},
-			"quarter_second": {
+			"fourth": {
 				"href": "https://github.com/tomotoes",
 				"icon": "github",
 				"text": "Github"
-			},
-			"quarter_third": {
-				"href": "https://twitter.com/amSimonMa",
-				"icon": "twitter",
-				"text": "Twitter"
-			},
-			"quarter_fourth": {
-				"href": "javascript:;",
-				"icon": "other",
-				"text": "other"
 			}
 		}
 	}
