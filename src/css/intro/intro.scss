@@ -19,7 +19,7 @@
 .content-title {
 	font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei",
 		-apple-system, sans-serif;
-	font-size: 4.7em;
+	font-size: 4.7rem;
 	font-weight: 200;
 	color: var(--color-title);
 	line-height: 1;
@@ -29,7 +29,7 @@
 	text-shadow: rgb(69, 45, 45) 0 0 1px, rgb(255, 255, 251) 0 0 1px,
 		rgb(255, 255, 251) 0 0 2px;
 	@media screen and (max-width: 50em) {
-		font-size: 2em;
+		font-size: 2rem;
 	}
 }
 
@@ -48,31 +48,31 @@
 	color: #fff;
 	font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei",
 		-apple-system, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	font-weight: 200;
 	margin-bottom: 2em;
 	text-shadow: 0 0 4px #ffffff;
 
 	@media screen and (max-width: 1024px) {
-		font-size: 1em;
+		font-size: 1rem;
 	}
 
 	@media screen and (max-width: 768px) {
-		font-size: 0.8em;
+		font-size: 0.8rem;
 	}
 
 	@media screen and (max-width: 560px) {
-		font-size: 0.7em;
+		font-size: 0.7rem;
 	}
 
 	@media screen and (max-width: 480px) {
-		font-size: 0.6em;
+		font-size: 0.6rem;
 	}
 }
 
 .enter {
 	color: var(--color-enter);
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	letter-spacing: 3px;
 	white-space: pre;
 	pointer-events: auto;
