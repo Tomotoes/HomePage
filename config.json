@@ -25,19 +25,19 @@
 				"icon": "bokeyuan",
 				"text": "Blog"
 			},
-			 {
+			 
 			{
 				"href": "about/",
 				"icon": "xiaolian",
 				"text": "About"
 			},
-			{
+			
 			{
 				"href": "mailto:simon@tomotoes.com",
 				"icon": "email",
 				"text": "Email"
 			},
-			 {
+			 
 			{
 				"href": "https://github.com/tomotoes",
 				"icon": "github",
