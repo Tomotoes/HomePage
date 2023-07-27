@@ -19,27 +19,30 @@
 			"height": "100",
 			"width": "100"
 		},
-		"ul": {
-			"first": {
+		"ul": [
+			{
 				"href": "blog/",
 				"icon": "bokeyuan",
 				"text": "Blog"
 			},
-			"second": {
+			 {
+			{
 				"href": "about/",
 				"icon": "xiaolian",
 				"text": "About"
 			},
-			"third": {
+			{
+			{
 				"href": "mailto:simon@tomotoes.com",
 				"icon": "email",
 				"text": "Email"
 			},
-			"fourth": {
+			 {
+			{
 				"href": "https://github.com/tomotoes",
 				"icon": "github",
 				"text": "Github"
 			}
-		}
+		]
 	}
 }
