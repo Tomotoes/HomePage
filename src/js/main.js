@@ -34,6 +34,7 @@ function getMoveDirection(startx, starty, endx, endy) {
 	const getAngle = (angx, angy) => (Math.atan2(angy, angx) * 180) / Math.PI
 
 	const angle = getAngle(angx, angy)
+	console.log(angle);
 	if (angle >= -135 && angle <= -45) {
 		return DIRECTIONS.UP
 	} else if (angle > 45 && angle < 135) {
@@ -154,6 +155,7 @@ if (isPhone) {
 		function (e) {
 			window.startx = e.touches[0].pageX
 			window.starty = e.touches[0].pageY
+			
 		},
 		{ passive: true }
 	)
@@ -172,4 +174,11 @@ if (isPhone) {
 		},
 		{ passive: true }
 	)
+	document.addEventListener(
+		'touchmove',
+		function (e) {
+			e.preventDefault();
+		},
+		{ passive: false }
+	);
 }

@@ -6,24 +6,10 @@
 				h1(data-translate="name") #{main.name}
 				h2#signature(data-translate="signature") #{main.signature}
 
-			- const { first , second , third, fourth } = main.ul
 			ul
-				li
-					a(href=`${first.href}` aria-label=`${first.text}`)
-						i(class=`icon icon-${first.icon}`)
-						span(data-translate=`${first.text}`) #{first.text}
+				each item, key in main.ul
+					li
+						a(href=`${item.href}` aria-label=`${item.text}`)
+							i(class=`icon icon-${item.icon}`)
+							span(data-translate=`${item.text}`) #{item.text}
 
-				li
-					a(href=`${second.href}` aria-label=`${second.text}`)
-						i(class=`icon icon-${second.icon}`)
-						span(data-translate=`${second.text}`) #{second.text}
-
-				li
-					a(href=`${third.href}` aria-label=`${third.text}` target="_blank")
-						i(class=`icon icon-${third.icon}`)
-						span(data-translate=`${third.text}`) #{third.text}
-
-				li
-					a(href=`${fourth.href}` aria-label=`${fourth.text}` target="_blank")
-						i(class=`icon icon-${fourth.icon}`)
-						span(data-translate=`${fourth.text}`) #{fourth.text}
